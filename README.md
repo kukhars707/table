@@ -1,68 +1,36 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Это тестовый пакет Table.
 
-## Available Scripts
+Для установки - npm i table-pb.
+Подключить - import Table from 'table-pb/dist/index';
 
-In the project directory, you can run:
+Для запуска демонстрации нужно перейти в папку example выполнить npm i & npm start.
 
-### `npm start`
+Формат данных
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+const headers = [
+    {title: 'Первая'},
+    {title: 'Вторая'},
+    {title: 'Третья'},
+    {title: 'Четвертая'},
+];
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+const data = [
+    {id: '1', label: 'label 1', description: 'description 1', date: '1.1.1.1', info: 'info 1'},
+    {id: '2', label: 'label 2', description: 'description 2', date: '2.2.2.2', info: 'info 2'},
+    {id: '3', label: 'label 3', description: 'description 3', date: '3.3.3.3', info: 'info 3'},
+    {id: '4', label: 'label 4', description: 'description 4', date: '4.4.4.4', info: 'info 4'},
+];
 
-### `npm test`
+API
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+headers - Это хедер таблицы
+data - Данные для рендера таблицы
+handleAdd - Функция добавления строки
+handleRemove - Функция удаления строки
+uniqId - Уникальный идентификатор
+tableClass - Класс для таблицы
+fieldClass - Класс для полей
+addButtonClass - Класс для кнопки добавления
+remButtonClass - Класс для кнопки удаления
+addButtonTitle - Заголовок для кнопки добавления
+remButtonTitle - Заголовок для кнопки удаления

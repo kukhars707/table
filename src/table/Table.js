@@ -49,14 +49,20 @@ export const Table = ({
         {headers && (
             <thead>
                 <tr>
-                    <th><button onClick={addRow} className={addButtonClass} >{addButtonTitle}</button></th>
+                    {handleAdd && (
+                        <th>
+                            <button onClick={addRow} className={addButtonClass}>
+                                {addButtonTitle || "Add"}
+                            </button>
+                        </th>
+                    )}
                     {headers.map((item, idx) => (
                         <Th key={idx}>{item.title}</Th>
                     ))}
                 </tr>
             </thead>
         )}
-        {tableData && (
+        {tableData && uniqId && (
             <tbody>
                 {tableData.map((item, index) => (
                     <TableRow
@@ -69,6 +75,7 @@ export const Table = ({
                         fieldClass={fieldClass}
                         remButtonClass={remButtonClass}
                         remButtonTitle={remButtonTitle}
+                        isRemove={handleRemove}
                     />
                 ))}
             </tbody>
